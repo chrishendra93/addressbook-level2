@@ -35,7 +35,8 @@ public class StorageFile {
     /**
      * Signals that the given file path does not fulfill the storage filepath constraints.
      */
-    public static class InvalidStorageFilePathException extends IllegalValueException {
+    @SuppressWarnings("serial")
+	public static class InvalidStorageFilePathException extends IllegalValueException {
         public InvalidStorageFilePathException(String message) {
             super(message);
         }
@@ -45,10 +46,18 @@ public class StorageFile {
      * Signals that some error has occured while trying to convert and read/write data between the application
      * and the storage file.
      */
-    public static class StorageOperationException extends Exception {
+    @SuppressWarnings("serial")
+	public static class StorageOperationException extends Exception {
         public StorageOperationException(String message) {
             super(message);
         }
+    }
+    
+    @SuppressWarnings("serial")
+	public static class DeletedFileException extends Exception{
+    	public DeletedFileException(String message){
+    		super(message);
+    	}
     }
 
     private final JAXBContext jaxbContext;
