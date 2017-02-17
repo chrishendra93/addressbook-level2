@@ -51,3 +51,7 @@
 * Problem: Test fails during the very first time.<br>
   Solution: The output of the very first test run could be slightly different because the program
   creates a new storage file. Tests should pass from the 2nd run onwards.
+
+**User stories**
+
+1. As a user I want to be able to see how am I affiliated with any person in the address book so that I can remember each person correctly. 
